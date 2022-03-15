@@ -17,6 +17,10 @@ Last Update: Mar 15, 2022
     background-color:#E7EDF1;
 }
 
+.page .background-fonce {
+    background-color:#277399;
+}
+
 .photo-profil img {
     border-radius: 50%;
     height: 100px;
@@ -24,3 +28,24 @@ Last Update: Mar 15, 2022
     max-width: 100px;
     max-height: 100px;
 }
+
+.custom-shape-divider-top-1647356327 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+}
+
+.custom-shape-divider-top-1647356327 svg {
+    position: relative;
+    display: block;
+    width: calc(100% + 1.3px);
+    height: 106px;
+}
+
+.custom-shape-divider-top-1647356327 .shape-fill {
+    fill: #FFFFFF;
+}
+COPY HTML
