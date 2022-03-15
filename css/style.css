@@ -9,6 +9,18 @@ Last Update: Mar 15, 2022
     margin:0;
 }
 
+.section-haute {
+    min-height:700px;
+}
+
 .page .background-clair {
     background-color:#E7EDF1;
+}
+
+.photo-profil img {
+    border-radius: 50%;
+    height: 100px;
+    width: 100px;
+    max-width: 100px;
+    max-height: 100px;
 }
