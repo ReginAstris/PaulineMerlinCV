@@ -139,6 +139,14 @@ h1 {
         background-image: none;
     }
 
+    h1 {
+        font-size:60px;
+    }
+
+    .section-information h2 {
+        font-size:30px;
+    }
+
     .div-photo {
         background-color:#E7EDF1;
     }
