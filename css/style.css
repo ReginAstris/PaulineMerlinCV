@@ -7,7 +7,6 @@ Last Update: Mar 15, 2022
 .page {
     margin:0;
     font-family:Roboto;
-
 }
 
 .section-haute {
@@ -30,11 +29,32 @@ Last Update: Mar 15, 2022
     background-size: cover;
 }
 
-.fond-vague-transversale {
-    fill-rule:evenodd;
-    clip-rule:evenodd;
-    fill:#E7EDF1;
+@media only screen and (max-width: 1300px){
+    .page .section-information { 
+        background-size: 110%;
+    }
 }
+
+.container {
+    display:flex;
+    justify-content:space-between;
+}
+
+.sub-container{
+    width:50%;
+    margin:40px;
+}
+
+.section-information .div-left {
+    margin: 20% 60px; 
+    text-align: right;
+}
+
+.section-information .div-right {
+    margin:25% 10%;
+}
+
+
 
 .photo-profil img {
     border-radius: 50%;
@@ -44,24 +64,29 @@ Last Update: Mar 15, 2022
     max-height: 100px;
 }
 
-.custom-shape-divider-top-1647356327 {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    overflow: hidden;
-    line-height: 0;
+@media only screen and (min-width: 1049px){
+    .custom-shape-divider-top {
+        display:none;
+    }
 }
 
-.custom-shape-divider-top-1647356327 svg {
+.custom-shape-divider-top svg {
     position: relative;
     display: block;
     width: calc(100% + 1.3px);
-    height: 106px;
+    height: 129px;
 }
 
-.custom-shape-divider-top-1647356327 .shape-fill {
+.custom-shape-divider-top .shape-fill {
     fill: #E7EDF1;
+}
+
+/** For mobile devices **/
+@media (max-width: 767px) {
+    .custom-shape-divider-top svg {
+        width: calc(100% + 1.3px);
+        height: 34px;
+    }
 }
 
 h1 {
@@ -69,7 +94,7 @@ h1 {
     font-weight:bold;
     text-transform : uppercase;
     letter-spacing:1.2px;
-    font-size:32px;
+    font-size:40px;
 }
 
 .section-information h2 {
@@ -97,6 +122,45 @@ h1 {
     font-weight:bold;
     display:block;
     text-align:center;
+}
+
+@media only screen and (max-width: 1048px){
+    .container {
+        flex-wrap: wrap;
+    }
+    .sub-container {
+        max-width: 100%;
+        width: 100%;
+        margin:0px;
+        padding:40px;
+    }
+
+    .page .section-information { 
+        background-image: none;
+    }
+
+    .div-photo {
+        background-color:#E7EDF1;
+    }
+
+    .section-information .div-left {
+        margin: 0px 40px;
+        text-align: center;
+    }
+
+    .section-information .div-right {
+        margin: 30px;
+    }
+
+    .section-information .photo-cv {
+        border-radius: 50%;
+        height: 250px;
+        width: 250px;
+        max-width: 250px;
+        max-height: 250px;
+    }
+
+
 }
 
 .fa-1-5x{
