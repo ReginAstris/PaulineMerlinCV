@@ -4,9 +4,10 @@ Template Author: Pauline MERLIN
 Version: 1.0.0
 Last Update: Mar 15, 2022
 --------------------------------------------- */
-
 .page {
     margin:0;
+    font-family:Roboto;
+
 }
 
 .section-haute {
@@ -15,10 +16,24 @@ Last Update: Mar 15, 2022
 
 .page .background-clair {
     background-color:#E7EDF1;
+    color:black;
 }
 
 .page .background-fonce {
     background-color:#277399;
+    color:white;
+}
+
+.page .section-information { 
+    background-image: url(../img/svg/fond-vague-transversale.svg); 
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.fond-vague-transversale {
+    fill-rule:evenodd;
+    clip-rule:evenodd;
+    fill:#E7EDF1;
 }
 
 .photo-profil img {
@@ -46,5 +61,143 @@ Last Update: Mar 15, 2022
 }
 
 .custom-shape-divider-top-1647356327 .shape-fill {
-    fill: #FFFFFF;
+    fill: #E7EDF1;
 }
+
+h1 {
+    text-align:center;
+    font-weight:bold;
+    text-transform : uppercase;
+    letter-spacing:1.2px;
+    font-size:32px;
+}
+
+.section-information h2 {
+    text-align:center;
+    font-family:Montserrat;
+    font-weight:100;
+    text-transform : uppercase;
+    letter-spacing:5px;
+    font-size:18px;
+}
+
+.section-information p{
+    text-align:justify;
+}
+
+.section-information .photo-cv {
+    border-radius: 50%;
+    height: 350px;
+    width: 350px;
+    max-width: 350px;
+    max-height: 350px;
+}
+
+.section-information .bouton {
+    font-weight:bold;
+    display:block;
+    text-align:center;
+}
+
+.fa-1-5x{
+    font-size:1.5em;
+}
+
+.pd-b-15{
+    padding-bottom:15px;
+}
+
+.pd-t-15{
+    padding-top:15px;
+}
+
+.pd-r-15{
+    padding-right:15px;
+}
+
+#scrollUp {
+    position: fixed;
+    right: 40px;
+    font-size: 20px;
+    line-height: 40px;
+    width: 40px;
+    height: 40px;
+    bottom: 40px;
+    background-color: #1cc3b2;
+    color: #fff;
+    text-align: center;
+    -webkit-transition-duration: .5s;
+    -o-transition-duration: .5s;
+    transition-duration: .5s;
+    border-radius: 50%;
+    -webkit-box-shadow: 0 2px 40px 8px rgb(15 15 15 / 15%);
+    box-shadow: 0 2px 40px 8px rgb(15 15 15 / 15%);
+    z-index: 15962536;
+}
+
+.toggle {
+    position: absolute;
+    right: 2rem;
+    top: 2rem;
+  }
+  .checkbox {
+    display: none;
+  }
+  .label {
+    height: 26px;
+    width: 50px;
+    background: rgb(182,182,182);
+    padding: 5px 8px;
+    border-radius: 50px;
+    cursor:pointer;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+    transform: scale(1.2);
+    box-shadow: 2px 1px 1px #333;
+  }
+  .label .ball {
+    background: #eee;
+    border-radius: 50%;
+    height: 26px;
+    width: 26px;
+    position: absolute;
+    top: 5px;
+    left: 6px;
+    transform: translateX(0px);
+    transition: transform 0.4s cubic-bezier(.45, -1.12, .35,1.78);
+  }
+  .checkbox:checked + .label .ball {
+    transform: translateX(29px);
+  }
+  .fa-moon {
+    color: #333;
+  }
+
+  /* DARK MODE */
+ .dark {
+    background: #333;
+  }
+  .dark .background-fonce {
+    background: #09FBBA;
+    color:black;
+  }
+
+  .dark .section-information { 
+    background-image: url(../img/svg/fond-vague-transversale-dark.svg); 
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+  .dark .background-clair {
+    background: black;
+    color:white;
+  }
+  .dark .label {
+    box-shadow: 2px 1px 1px #09FBBA;
+    background: #888;
+  }
+  .dark .ball {
+    background: #09FBBA;
+  }
