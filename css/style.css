@@ -124,12 +124,18 @@ h1 {
     display: flex;
     position: fixed;
     bottom: 0;
+    border-top: dashed #277399;
+    height:55px;
+    align-items: center;
+    justify-content: center;
 }
 
 .menu-rapide div {
+    display:inline-block;
     width:20%;
-    padding:20px;
-    font-size:20px;
+    font-size:40px;
+    text-align:center;
+    color:#277399;
 }
 
 .section-haute {
