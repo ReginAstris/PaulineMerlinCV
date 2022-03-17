@@ -112,16 +112,38 @@ h1 {
 
 .section-information .photo-cv {
     border-radius: 50%;
-    height: 350px;
-    width: 350px;
-    max-width: 350px;
-    max-height: 350px;
+    height: 500px;
+    width: 500px;
+    max-width: 500px;
+    max-height: 500px;
 }
 
 .section-information .bouton {
     font-weight:bold;
     display:block;
     text-align:center;
+}
+
+.barre-laterale {
+    display: block;
+    margin: 0px auto 50px auto;
+}
+
+.barre-laterale line {
+    stroke:white;
+}
+
+.dark .barre-laterale line {
+    stroke:black;
+}
+
+@media only screen and (min-width: 1048px){
+    .section-information .photo-cv {
+        height: 350px;
+        width: 350px;
+        max-width: 350px;
+        max-height: 350px;
+    }
 }
 
 @media only screen and (max-width: 1048px){
@@ -139,16 +161,18 @@ h1 {
         background-image: none;
     }
 
+    .page .div-photo {
+        background-image: url(../img/svg/fond-vague-mobile.svg); 
+        background-repeat:no-repeat;
+        background-size:cover;
+    }
+
     h1 {
         font-size:60px;
     }
 
     .section-information h2 {
         font-size:30px;
-    }
-
-    .div-photo {
-        background-color:#E7EDF1;
     }
 
     .section-information .div-left {
@@ -159,16 +183,19 @@ h1 {
     .section-information .div-right {
         margin: 30px;
     }
+}
 
+@media only screen and (max-width: 821px){
     .section-information .photo-cv {
-        border-radius: 50%;
-        height: 250px;
-        width: 250px;
-        max-width: 250px;
-        max-height: 250px;
+        height: 500px;
+        width: 500px;
+        max-width: 500px;
+        max-height: 500px;
     }
 
-
+    .label {
+        transform: scale(3);
+      }
 }
 
 .fa-1-5x{
@@ -273,3 +300,10 @@ h1 {
   .dark .ball {
     background: #09FBBA;
   }
+
+  @media only screen and (max-width: 821px){
+
+    .label {
+        transform: scale(3);
+      }
+}
