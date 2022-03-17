@@ -4,198 +4,16 @@ Template Author: Pauline MERLIN
 Version: 1.0.0
 Last Update: Mar 15, 2022
 --------------------------------------------- */
-.page {
+/*
+    GENERAL
+*/
+
+body {
     margin:0;
     font-family:Roboto;
 }
-
-.section-haute {
-    min-height:700px;
-}
-
-.page .background-clair {
-    background-color:#E7EDF1;
-    color:black;
-}
-
-.page .background-fonce {
-    background-color:#277399;
-    color:white;
-}
-
-.page .section-information { 
-    background-image: url(../img/svg/fond-vague-transversale.svg); 
-    background-repeat: no-repeat;
-    background-size: cover;
-}
-
-@media only screen and (max-width: 1300px){
-    .page .section-information { 
-        background-size: 110%;
-    }
-}
-
-.container {
-    display:flex;
-    justify-content:space-between;
-}
-
-.sub-container{
-    width:50%;
-    margin:40px;
-}
-
-.section-information .div-left {
-    margin: 20% 60px; 
-    text-align: right;
-}
-
-.section-information .div-right {
-    margin:25% 10%;
-}
-
-
-
-.photo-profil img {
-    border-radius: 50%;
-    height: 100px;
-    width: 100px;
-    max-width: 100px;
-    max-height: 100px;
-}
-
-@media only screen and (min-width: 1049px){
-    .custom-shape-divider-top {
-        display:none;
-    }
-}
-
-.custom-shape-divider-top svg {
-    position: relative;
-    display: block;
-    width: calc(100% + 1.3px);
-    height: 129px;
-}
-
-.custom-shape-divider-top .shape-fill {
-    fill: #E7EDF1;
-}
-
-/** For mobile devices **/
-@media (max-width: 767px) {
-    .custom-shape-divider-top svg {
-        width: calc(100% + 1.3px);
-        height: 34px;
-    }
-}
-
-h1 {
-    text-align:center;
-    font-weight:bold;
-    text-transform : uppercase;
-    letter-spacing:1.2px;
-    font-size:40px;
-}
-
-.section-information h2 {
-    text-align:center;
-    font-family:Montserrat;
-    font-weight:100;
-    text-transform : uppercase;
-    letter-spacing:5px;
-    font-size:18px;
-}
-
-.section-information p{
-    text-align:justify;
-}
-
-.section-information .photo-cv {
-    border-radius: 50%;
-    height: 500px;
-    width: 500px;
-    max-width: 500px;
-    max-height: 500px;
-}
-
-.section-information .bouton {
-    font-weight:bold;
-    display:block;
-    text-align:center;
-}
-
-.barre-laterale {
-    display: block;
-    margin: 0px auto 50px auto;
-}
-
-.barre-laterale line {
-    stroke:white;
-}
-
-.dark .barre-laterale line {
-    stroke:black;
-}
-
-@media only screen and (min-width: 1048px){
-    .section-information .photo-cv {
-        height: 350px;
-        width: 350px;
-        max-width: 350px;
-        max-height: 350px;
-    }
-}
-
-@media only screen and (max-width: 1048px){
-    .container {
-        flex-wrap: wrap;
-    }
-    .sub-container {
-        max-width: 100%;
-        width: 100%;
-        margin:0px;
-        padding:40px;
-    }
-
-    .page .section-information { 
-        background-image: none;
-    }
-
-    .page .div-photo {
-        background-image: url(../img/svg/fond-vague-mobile.svg); 
-        background-repeat:no-repeat;
-        background-size:cover;
-    }
-
-    h1 {
-        font-size:60px;
-    }
-
-    .section-information h2 {
-        font-size:30px;
-    }
-
-    .section-information .div-left {
-        margin: 0px 40px;
-        text-align: center;
-    }
-
-    .section-information .div-right {
-        margin: 30px;
-    }
-}
-
-@media only screen and (max-width: 821px){
-    .section-information .photo-cv {
-        height: 500px;
-        width: 500px;
-        max-width: 500px;
-        max-height: 500px;
-    }
-
-    .label {
-        transform: scale(3);
-      }
+.dark {
+    background: #333;
 }
 
 .fa-1-5x{
@@ -205,15 +23,33 @@ h1 {
 .pd-b-15{
     padding-bottom:15px;
 }
-
 .pd-t-15{
     padding-top:15px;
 }
-
 .pd-r-15{
     padding-right:15px;
 }
 
+h1 {
+    text-align:center;
+    font-weight:bold;
+    text-transform : uppercase;
+    letter-spacing:1.2px;
+    font-size:60px;
+}
+
+.barre-laterale {
+    display: block;
+    margin: 0px auto 50px auto;
+}
+.barre-laterale line {
+    stroke:white;
+}
+.dark .barre-laterale line {
+    stroke:black;
+}
+
+/* BOUTON SCROLLUP */
 #scrollUp {
     position: fixed;
     right: 40px;
@@ -234,15 +70,16 @@ h1 {
     z-index: 15962536;
 }
 
+/* TOGGLE DARK MODE */
 .toggle {
     position: absolute;
     right: 2rem;
     top: 2rem;
-  }
-  .checkbox {
+}
+.checkbox {
     display: none;
-  }
-  .label {
+}
+.label {
     height: 26px;
     width: 50px;
     background: rgb(182,182,182);
@@ -253,10 +90,15 @@ h1 {
     align-items: center;
     justify-content: space-between;
     position: relative;
-    transform: scale(1.2);
+    transform: scale(3);
     box-shadow: 2px 1px 1px #333;
-  }
-  .label .ball {
+}
+@media only screen and (min-width: 822px){
+    .label {
+        transform: scale(1.2);
+      }
+}
+.label .ball {
     background: #eee;
     border-radius: 50%;
     height: 26px;
@@ -266,44 +108,160 @@ h1 {
     left: 6px;
     transform: translateX(0px);
     transition: transform 0.4s cubic-bezier(.45, -1.12, .35,1.78);
-  }
-  .checkbox:checked + .label .ball {
+}
+.checkbox:checked + .label .ball {
     transform: translateX(29px);
-  }
-  .fa-moon {
+}
+.fa-moon {
     color: #333;
-  }
+}
+.dark .label {
+    box-shadow: 2px 1px 1px #09FBBA;
+    background: #888;
+}
+.dark .ball {
+    background: #09FBBA;
+}
 
-  /* DARK MODE */
- .dark {
-    background: #333;
-  }
-  .dark .background-fonce {
+.section-haute {
+    min-height:700px;
+}
+
+.background-clair {
+    background-color:#E7EDF1;
+    color:black;
+}
+.dark .background-clair {
+    background: black;
+    color:white;
+}
+
+.background-fonce {
+    background-color:#277399;
+    color:white;
+}
+.dark .background-fonce {
     background: #09FBBA;
     color:black;
-  }
+}
 
-  .dark .section-information { 
-    background-image: url(../img/svg/fond-vague-transversale-dark.svg); 
+.container {
+    display:flex;
+    justify-content:space-between;
+    flex-wrap: wrap;
+}
+
+.sub-container {
+    max-width: 100%;
+    width: 100%;
+    padding:40px;
+}
+
+/* DESKTOP */
+@media only screen and (min-width: 1048px){
+    h1 {
+        font-size:40px;
+    }
+
+    .container {
+        flex-wrap: nowrap;
+    }
+
+    .sub-container{
+        width:50%;
+        margin:40px;
+        padding:0px;
+    }
+}
+
+/*
+    SECTION INFORMATION
+*/
+.section-information .div-left {
+    margin: 0px 40px;
+    text-align: center;
+}
+
+.section-information .div-right {
+    margin: 30px;
+}
+
+.section-information .div-photo {
+    background-image: url(../img/svg/fond-vague-mobile.svg); 
+    background-repeat:no-repeat;
+    background-size:cover;
+}
+.dark .section-information .div-photo { 
+    background-image: url(../img/svg/fond-vague-mobile-dark.svg); 
     background-repeat: no-repeat;
     background-size: cover;
 }
 
-  .dark .background-clair {
-    background: black;
-    color:white;
-  }
-  .dark .label {
-    box-shadow: 2px 1px 1px #09FBBA;
-    background: #888;
-  }
-  .dark .ball {
-    background: #09FBBA;
-  }
-
-  @media only screen and (max-width: 821px){
-
-    .label {
-        transform: scale(3);
-      }
+.section-information .photo-cv {
+    border-radius: 50%;
+    height: 500px;
+    width: 500px;
+    max-width: 500px;
+    max-height: 500px;
 }
+
+.section-information h2 {
+    text-align:center;
+    font-family:Montserrat;
+    font-weight:100;
+    text-transform : uppercase;
+    letter-spacing:5px;
+    font-size:30px;
+}
+
+.section-information p{
+    text-align:justify;
+}
+
+.section-information .bouton {
+    font-weight:bold;
+    display:block;
+    text-align:center;
+}
+
+/* DESKTOP */
+@media only screen and (min-width: 1048px){
+    .section-information .div-left {
+        margin: 20% 60px; 
+        text-align: right;
+    }
+    
+    .section-information .div-right {
+        margin:25% 10%;
+    }
+
+    .section-information { 
+        background-image: url(../img/svg/fond-vague-transversale.svg); 
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+    .dark .section-information { 
+        background-image: url(../img/svg/fond-vague-transversale-dark.svg); 
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    .section-information .div-photo {
+        background-image:none;
+    }
+    .dark .section-information .div-photo { 
+        background-image:none;
+    }
+
+    .section-information .photo-cv {
+        height: 350px;
+        width: 350px;
+        max-width: 350px;
+        max-height: 350px;
+    }
+
+    .section-information h2 {
+        font-size:18px;
+    }
+}
+ 
