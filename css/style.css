@@ -64,7 +64,7 @@ a:visited { color: black; text-decoration:none;}
 }
 
 .background-fonce a:link { color: white;text-decoration:none; }   
-.background-fonce a:link {
+.dark .background-fonce a:link {
     color:black;
 }
 .background-fonce a:active {
@@ -77,6 +77,12 @@ a:visited { color: black; text-decoration:none;}
 .dark .background-fonce a:visited {
     color:black;
 }
+
+.background-jaune a:link { color: white;text-decoration:none; }   
+.background-jaune a:active {
+    color: white;text-decoration:none;
+}
+.background-jaune a:visited { color: white; text-decoration:none;}
 
 .barre-laterale {
     display: block;
