@@ -104,12 +104,11 @@
                         hauteurMenuRapide=350;
                     }
                     let positionBasse=(window.innerHeight-hauteurMenuRapide)/2;
-                    console.log(positionBasse);
-                    document.getElementById("menu-rapide").style="bottom:"+positionBasse+";";
-                    console.log( document.getElementById("menu-rapide").style.bottom);
+                    document.getElementById("menu-rapide").style="bottom:"+positionBasse+"px;";
                 }
                 else {
                     document.getElementById("menu-rapide").style.bottom=0;
+                    document.getElementById("menu-rapide").style="bottom:0px";
                 }
             }
             window.addEventListener('load', (event) => {
