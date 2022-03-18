@@ -214,7 +214,7 @@ h1 {
     }
 
     #menu-rapide:hover {
-        width:250px;
+        width:270px;
     }
     
     #menu-rapide div {
@@ -225,15 +225,17 @@ h1 {
         letter-spacing: 2px;
         text-align:left;
     }
+    #menu-rapide .icone {
+        text-align:center;
+        width:47px;
+        margin:15px;
+
+    }
     #menu-rapide div i{
-        padding:15px;
         font-size:40px;
     }
-    #menu-rapide div span{
-        transition: display 2s;
-    }
 
-    #menu-rapide:hover div span{
+    #menu-rapide.menu-apparition div span{
         display:inline-block;
     }
     

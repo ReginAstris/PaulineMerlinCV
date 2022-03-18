@@ -68,19 +68,17 @@
             </label>
         </div>
         <div id="menu-rapide" class="background-clair">
-            <div><i class="fa-solid fa-address-card"></i><span>Présentation</span></div>
-            <div><i class="fa-solid fa-lightbulb"></i><span>Compétences</span></div>
-            <div><i class="fa-solid fa-briefcase"></i><span>Expériences</span></div>
-            <div><i class="fa-solid fa-book"></i><span>Portfolio</span></div>
-            <div><i class="fa-solid fa-envelope"></i><span>Contact</span></div>
+            <div><div class="icone"><i class="fa-solid fa-address-card"></i></div><span>Présentation</span></div>
+            <div><div class="icone"><i class="fa-solid fa-lightbulb"></i></div><span>Compétences</span></div>
+            <div><div class="icone"><i class="fa-solid fa-briefcase"></div></i><span>Expériences</span></div>
+            <div><div class="icone"><i class="fa-solid fa-book"></i></div><span>Portfolio</span></div>
+            <div><div class="icone"><i class="fa-solid fa-envelope"></i></div><span>Contact</span></div>
         </div>
         <script src="js/dark-mode.js"></script>
         <script>
             function repositionnementDivMenuRapide(){
-                console.log(window.innerWidth);
                 if (window.innerWidth >= "1048"){
                     let hauteurMenuRapide=document.getElementById("menu-rapide").clientHeight;
-                    console.log(hauteurMenuRapide);
                     let positionBasse=(window.innerHeight-hauteurMenuRapide)/2;
                     document.getElementById("menu-rapide").style.bottom=positionBasse;
                 }
@@ -90,6 +88,23 @@
             });
             
             window.onresize = function(){repositionnementDivMenuRapide();}
+
+            var timer;
+            
+            document.getElementById("menu-rapide").addEventListener("mouseenter", function( event ) {
+                // On fait apparaître le texte du menu
+                timer=setTimeout(function() {
+                    if (document.getElementById("menu-rapide").clientWidth == 270){
+                        console.log("je l'ajoute");
+                        document.getElementById("menu-rapide").classList.add("menu-apparition");
+                    }
+                }, 500);
+            }, false);
+
+            document.getElementById("menu-rapide").addEventListener("mouseleave", function( event ) {
+                console.log("je supprime : ");
+                document.getElementById("menu-rapide").classList.remove("menu-apparition");
+            }, false);
         </script>
     </body>
 </html>
