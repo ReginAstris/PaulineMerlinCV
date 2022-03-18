@@ -42,14 +42,41 @@ h1 {
     font-size:30px;
 }
 
-a:link { color: white;text-decoration:none; }   
+a:link { color: black;text-decoration:none; }   
+.dark a:link {
+    color:white;
+}
 a:hover {
     color:#E5B822;text-decoration:none;
 }
+.dark a:hover {
+    color:white;
+}
 a:active {
+    color: black;text-decoration:none;
+}
+.dark a:active {
+    color:white;
+}
+a:visited { color: black; text-decoration:none;}
+.dark a:visited {
+    color:white;
+}
+
+.background-fonce a:link { color: white;text-decoration:none; }   
+.background-fonce a:link {
+    color:black;
+}
+.background-fonce a:active {
     color: white;text-decoration:none;
 }
-a:visited { color: white; text-decoration:none;}
+.dark .background-fonce a:active {
+    color:black;
+}
+.background-fonce a:visited { color: white; text-decoration:none;}
+.dark .background-fonce a:visited {
+    color:black;
+}
 
 .barre-laterale {
     display: block;
@@ -166,6 +193,9 @@ a:visited { color: white; text-decoration:none;}
     background-color:#E5B822;
     color:white;
 }
+.dark .background-jaune{
+    background:#888;
+}
 
 .container {
     display:flex;
@@ -204,10 +234,10 @@ a:visited { color: white; text-decoration:none;}
         display:block;
         position: fixed;
         right: 40px;
-        font-size: 20px;
-        line-height: 40px;
-        width: 40px;
-        height: 40px;
+        font-size: 22px;
+        line-height: 43px;
+        width: 43px;
+        height: 43px;
         bottom: 40px;
         background-color: #E5B822;
         color: #fff;
@@ -216,9 +246,12 @@ a:visited { color: white; text-decoration:none;}
         -o-transition-duration: .5s;
         transition-duration: .5s;
         border-radius: 50%;
-        -webkit-box-shadow: 0 2px 40px 8px rgb(15 15 15 / 15%);
-        box-shadow: 0 2px 40px 8px rgb(15 15 15 / 15%);
+        box-shadow: 2px 1px 1px #333;
         z-index: 15962536;
+    }
+    .dark #scrollUp {
+        background-color: #888;
+        box-shadow: 2px 1px 1px white;
     }
 
     #menu-rapide {
@@ -270,9 +303,15 @@ a:visited { color: white; text-decoration:none;}
     #menu-rapide .sous-menu:hover span {
         color:#277399;
     }
+    .dark #menu-rapide .sous-menu:hover span {
+        color:black;
+    }
 
     #menu-rapide .sous-menu:hover .icone {
         color:#277399;
+    }
+    .dark #menu-rapide .sous-menu:hover .icone {
+        color:black;
     }
     
 }
