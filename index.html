@@ -24,6 +24,32 @@
         <title>Pauline MERLIN - Développement Front-End | CV</title>
     </head>
     <body class="page">
+
+        <!-- MENU -->
+        <div id="menu-rapide" class="background-jaune">
+            <div class="sous-menu"><a href="#top"><div class="icone"><i class="fa-solid fa-address-card"></i></div><span>Présentation</span></a></div>
+            <div class="sous-menu"><a href="#competences"><div class="icone"><i class="fa-solid fa-lightbulb"></i></div><span>Compétences</span></a></div>
+            <div class="sous-menu"><a href="#experiences"><div class="icone"><i class="fa-solid fa-briefcase"></div></i><span>Expériences</span></a></div>
+            <div class="sous-menu"><a href="#portfolio"><div class="icone"><i class="fa-solid fa-book"></i></div><span>Portfolio</span></a></div>
+            <div class="sous-menu"><a href="#contact"><div class="icone"><i class="fa-solid fa-envelope"></i></div><span>Contact</span></a></div>
+        </div>
+
+        <!-- TOGGLE DARK MODE -->
+        <div class="toggle">
+            <input type="checkbox" class="checkbox" id="dark-mode">
+            <label for="dark-mode" class="label">
+                <i class="fas fa-moon"></i>
+                <i class="fas fa-sun"></i>
+                <div class="ball"></div>
+            </label>
+        </div>
+
+        <!-- BOUTON TOP (non mobile) -->
+        <a id="scrollUp" href="#top" style="position: fixed; z-index: 2;">
+            <i class="fa-solid fa-arrow-up" style="padding-top:9px"></i>
+        </a>
+
+        <!-- CONTENU -->
         <section class="section-haute section-information background-fonce">
             <div class="container">
                 <div class="sub-container div-photo">
@@ -46,36 +72,28 @@
             </div>
         </section>
         
-        <section class="section-haute background-clair">
-            <div>
-                <h1>Hello!</h1>
+        <section class="background-fonce" id="competences">
+            <div class="container">
+                <h3>Compétences</h3>
             </div>
         </section>
-        <a id="scrollUp" href="#top" style="position: fixed; z-index: 2147483647;">
-            <i class="fa-solid fa-arrow-up" style="padding-top:9px"></i>
-        </a>
-        <div class="toggle">
-            <input type="checkbox" class="checkbox" id="dark-mode">
-            <label for="dark-mode" class="label">
-                <i class="fas fa-moon"></i>
-                <i class="fas fa-sun"></i>
-                <div class="ball"></div>
-            </label>
-        </div>
-        <div id="menu-rapide" class="background-clair">
-            <div class="sous-menu"><a href="#top"><div class="icone"><i class="fa-solid fa-address-card"></i></div><span>Présentation</span></a></div>
-            <div class="sous-menu"><a href="#top"><div class="icone"><i class="fa-solid fa-lightbulb"></i></div><span>Compétences</span></a></div>
-            <div class="sous-menu"><a href="#top"><div class="icone"><i class="fa-solid fa-briefcase"></div></i><span>Expériences</span></a></div>
-            <div class="sous-menu"><a href="#top"><div class="icone"><i class="fa-solid fa-book"></i></div><span>Portfolio</span></a></div>
-            <div class="sous-menu"><a href="#top"><div class="icone"><i class="fa-solid fa-envelope"></i></div><span>Contact</span></a></div>
-            <!-- <div id="menu-rapide" class="background-clair">
-                <div><div class="icone"><i class="fa-solid fa-address-card"></i></div><div class="text"><span>Présentation</span></div></div>
-                <div><div class="icone"><i class="fa-solid fa-lightbulb"></i></div><div class="text"><span>Compétences</span></div></div>
-                <div><div class="icone"><i class="fa-solid fa-briefcase"></div></i><div class="text"><span>Expériences</span></div></div>
-                <div><div class="icone"><i class="fa-solid fa-book"></i></div><div class="text"><span>Portfolio</span></div></div>
-                <div><div class="icone"><i class="fa-solid fa-envelope"></i></div><div class="text"><span>Contact</span></div></div>
-            </div> -->
-        </div>
+        <section class="background-clair" id="experiences">
+            <div class="container">
+                <h3>Expériences</h3>
+            </div>
+        </section>
+        <section class="background-fonce" id="portfolio">
+            <div class="container">
+                <h3>Portfolio</h3>
+            </div>
+        </section>
+        <section class="background-clair" id="contact">
+            <div class="container">
+                <h3>Contacts</h3>
+            </div>
+        </section>
+        
+        
         <script src="js/dark-mode.js"></script>
         <script>
             function repositionnementDivMenuRapide(){
