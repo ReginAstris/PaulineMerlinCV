@@ -39,16 +39,11 @@
                             <line x1="0" x2="200" y1="0" y2="0" stroke="white" stroke-width="5"/>
                         </svg>
                         <p class="pd-b-15">Ingénieure diplômée, j'ai travaillé pendant cinq ans dans le développement plutôt orienté back-office. Étant très créative, j'ai décidé de créer mon auto-entreprise en 2019 et de m'orienter plus significativement vers le développement Web.</p>
-                        <span class="bouton"><i class="fa-solid fa-book fa-1-5x pd-r-15"></i>Découvrez mon portfolio</span>
+                        <span class="bouton pd-b-15"><i class="fa-solid fa-book fa-1-5x pd-r-15"></i>Découvrez mon portfolio</span>
+                        <a href="pdf/cv-pauline-merlin-developpement-frontend.pdf" target="_blank" download><span class="bouton"><i class="fa-solid fa-file-arrow-down fa-1-5x pd-r-15"></i>Télécharger mon CV</span></a>
                     </div>
                 </div>
             </div>
-            <!--<img src="img/photos/pauline-merlin.jpg"/>
-            <i class="fa-solid fa-book-sparkles"></i>
-            <i class="fa-solid fa-address-card"></i>
-            <i class="fa-solid fa-envelope"></i>
-            <i class="fa-solid fa-lightbulb-on"></i>
-            <i class="fa-solid fa-briefcase"></i>-->
         </section>
         
         <section class="section-haute background-clair">
@@ -68,41 +63,56 @@
             </label>
         </div>
         <div id="menu-rapide" class="background-clair">
-            <div><div class="icone"><i class="fa-solid fa-address-card"></i></div><span>Présentation</span></div>
-            <div><div class="icone"><i class="fa-solid fa-lightbulb"></i></div><span>Compétences</span></div>
-            <div><div class="icone"><i class="fa-solid fa-briefcase"></div></i><span>Expériences</span></div>
-            <div><div class="icone"><i class="fa-solid fa-book"></i></div><span>Portfolio</span></div>
-            <div><div class="icone"><i class="fa-solid fa-envelope"></i></div><span>Contact</span></div>
+            <div class="sous-menu"><a href="#top"><div class="icone"><i class="fa-solid fa-address-card"></i></div><span>Présentation</span></a></div>
+            <div class="sous-menu"><a href="#top"><div class="icone"><i class="fa-solid fa-lightbulb"></i></div><span>Compétences</span></a></div>
+            <div class="sous-menu"><a href="#top"><div class="icone"><i class="fa-solid fa-briefcase"></div></i><span>Expériences</span></a></div>
+            <div class="sous-menu"><a href="#top"><div class="icone"><i class="fa-solid fa-book"></i></div><span>Portfolio</span></a></div>
+            <div class="sous-menu"><a href="#top"><div class="icone"><i class="fa-solid fa-envelope"></i></div><span>Contact</span></a></div>
+            <!-- <div id="menu-rapide" class="background-clair">
+                <div><div class="icone"><i class="fa-solid fa-address-card"></i></div><div class="text"><span>Présentation</span></div></div>
+                <div><div class="icone"><i class="fa-solid fa-lightbulb"></i></div><div class="text"><span>Compétences</span></div></div>
+                <div><div class="icone"><i class="fa-solid fa-briefcase"></div></i><div class="text"><span>Expériences</span></div></div>
+                <div><div class="icone"><i class="fa-solid fa-book"></i></div><div class="text"><span>Portfolio</span></div></div>
+                <div><div class="icone"><i class="fa-solid fa-envelope"></i></div><div class="text"><span>Contact</span></div></div>
+            </div> -->
         </div>
         <script src="js/dark-mode.js"></script>
         <script>
             function repositionnementDivMenuRapide(){
+                console.log(document.getElementById("menu-rapide").scrollHeight);
                 if (window.innerWidth >= "1048"){
-                    let hauteurMenuRapide=document.getElementById("menu-rapide").clientHeight;
+                    console.log("ici");
+                    let hauteurMenuRapide=document.getElementById("menu-rapide").offsetHeight;
+                    if (hauteurMenuRapide!=350){
+                        hauteurMenuRapide=350;
+                    }
                     let positionBasse=(window.innerHeight-hauteurMenuRapide)/2;
                     document.getElementById("menu-rapide").style.bottom=positionBasse;
                 }
+                else {
+                    document.getElementById("menu-rapide").style.bottom=0;
+                }
             }
-            window.addEventListener('load', (event) => {
-                repositionnementDivMenuRapide();
-            });
+            // window.addEventListener('load', (event) => {
+            //     repositionnementDivMenuRapide();
+            // });
+
+            window.onload =repositionnementDivMenuRapide();
             
             window.onresize = function(){repositionnementDivMenuRapide();}
 
             var timer;
             
             document.getElementById("menu-rapide").addEventListener("mouseenter", function( event ) {
-                // On fait apparaître le texte du menu
+                // On fait apparaître le texte du menu avec une latence (pour l'animation css)
                 timer=setTimeout(function() {
                     if (document.getElementById("menu-rapide").clientWidth == 270){
-                        console.log("je l'ajoute");
                         document.getElementById("menu-rapide").classList.add("menu-apparition");
                     }
                 }, 500);
             }, false);
 
             document.getElementById("menu-rapide").addEventListener("mouseleave", function( event ) {
-                console.log("je supprime : ");
                 document.getElementById("menu-rapide").classList.remove("menu-apparition");
             }, false);
         </script>

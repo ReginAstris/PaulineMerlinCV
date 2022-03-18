@@ -8,6 +8,10 @@ Last Update: Mar 15, 2022
     GENERAL
 */
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
     margin:0;
     font-family:Roboto;
@@ -37,6 +41,15 @@ h1 {
     letter-spacing:1.2px;
     font-size:30px;
 }
+
+a:link { color: white;text-decoration:none; }   
+a:hover {
+    color:#1cc3b2;text-decoration:none;
+}
+a:active {
+    color: white;text-decoration:none;
+}
+a:visited { color: white; text-decoration:none;}
 
 .barre-laterale {
     display: block;
@@ -137,6 +150,9 @@ h1 {
     text-align:center;
     color:#277399; 
 }
+#menu-rapide .icone {
+        width: 100%;
+}
 #menu-rapide div span{
     display:none;
 }
@@ -224,19 +240,31 @@ h1 {
         font-size:25px;
         letter-spacing: 2px;
         text-align:left;
+        display:table;
     }
     #menu-rapide .icone {
         text-align:center;
         width:47px;
-        margin:15px;
-
+        padding:15px;
+        display:table-cell;
     }
     #menu-rapide div i{
         font-size:40px;
     }
 
     #menu-rapide.menu-apparition div span{
-        display:inline-block;
+        display:table-cell;
+        vertical-align:middle;
+        font-size:20px;
+        font-weight:600;
+    }
+
+    #menu-rapide .sous-menu:hover span {
+        color:#1cc3b2;
+    }
+
+    #menu-rapide .sous-menu:hover .icone {
+        color:#1cc3b2;
     }
     
 }
