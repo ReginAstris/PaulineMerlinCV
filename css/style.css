@@ -60,6 +60,14 @@ h1 {
     font-size:30px;
 }
 
+h3 {
+    text-align:center;
+    font-weight:bold;
+    text-transform:uppercase;
+    letter-spacing:2px;
+    font-size:25px;
+}
+
 a:link { color: black;text-decoration:none; }   
 .dark a:link {
     color:white;
@@ -175,6 +183,7 @@ a:visited { color: black; text-decoration:none;}
     height:55px;
     align-items: center;
     justify-content: center;
+    z-index:2;
 }
 
 #menu-rapide div {
@@ -222,15 +231,84 @@ a:visited { color: black; text-decoration:none;}
 }
 
 .container {
+    padding:50px;
+}
+
+.section-information .container {
     display:flex;
     justify-content:space-between;
     flex-wrap: wrap;
+    padding:0px;
 }
 
-.sub-container {
+.section-information .sub-container {
     max-width: 100%;
     width: 100%;
     padding:20px;
+}
+
+.custom-shape-divider-top {
+    top: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+}
+
+.custom-shape-divider-top svg {
+    position: relative;
+    display: block;
+    width: calc(169% + 1.3px);
+    height: 62px;
+}
+
+.background-clair .custom-shape-divider-top .shape-fill {
+    fill: #277399;
+}
+.dark .background-clair .custom-shape-divider-top .shape-fill {
+    fill:white;
+}
+.background-fonce .custom-shape-divider-top .shape-fill {
+    fill: #E7EDF1;
+}
+.dark .background-fonce .custom-shape-divider-top .shape-fill {
+    fill:black;
+}
+
+footer {
+    font-size: 13px;
+    text-align: center;
+    padding: 25px;
+    line-height: 20px;
+    padding-bottom:60px;
+}
+
+footer i:hover {
+    background-color: #277399;
+    color:white;
+}
+.dark footer i:hover {
+    background-color: white;
+    color:black;
+}
+
+footer i {
+    background-color: #E7EDF1;
+    color:#277399;
+    font-size: 21px;
+    margin: 0px 10px 15px;
+    padding: 10px 0px;
+    width: 40px;
+    -webkit-border-radius: 40px;
+    -moz-border-radius: 40px;
+    border-radius: 40px;
+    cursor: pointer;
+    transition: .5s ease;
+    -webkit-transition: all 0.5s;
+}
+.dark footer i {
+    background-color: black;
+    color:white;
 }
 
 /* DESKTOP */
@@ -239,11 +317,11 @@ a:visited { color: black; text-decoration:none;}
         font-size:40px;
     }
     
-    .container {
+    .section-information .container {
         flex-wrap: nowrap;
     }
 
-    .sub-container{
+    .section-information .sub-container{
         width:50%;
         margin:40px;
         padding:0px;
@@ -337,7 +415,15 @@ a:visited { color: black; text-decoration:none;}
     .dark #menu-rapide .sous-menu:hover .icone {
         color:black;
     }
-    
+
+    .custom-shape-divider-top svg {
+        width: calc(100% + 1.3px);
+        height: 85px;
+    }
+
+    footer {
+        padding-bottom:20px;
+    }
 }
 
 /*
