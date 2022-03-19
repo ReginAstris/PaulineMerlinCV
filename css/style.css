@@ -51,6 +51,9 @@ body {
 .pd-r-15{
     padding-right:15px;
 }
+.align-center {
+    text-align:center;
+}
 
 h1 {
     text-align:center;
@@ -247,6 +250,12 @@ a:visited { color: black; text-decoration:none;}
     padding:20px;
 }
 
+.section-contact .sub-container {
+    margin-top: 60px;
+    background-color: rgb(256,256,256,0.7);
+    padding: 20px;
+}
+
 .custom-shape-divider-top {
     top: 0;
     left: 0;
@@ -273,6 +282,65 @@ a:visited { color: black; text-decoration:none;}
 }
 .dark .background-fonce .custom-shape-divider-top .shape-fill {
     fill:black;
+}
+
+.parallax {
+    /* The image used */
+    background-image: url("../img/photos/img_parallax.jpg");
+  
+    /* Set a specific height */
+    min-height: 500px; 
+  
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+.parallax::after {
+    background-color: rgba(14,39,55,.7);
+}
+
+.contact-box {
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    display:flex;
+    flex-wrap:wrap;
+}
+
+.contact-box .item {
+    visibility: visible;
+    animation-delay: 100ms;
+    animation-name: fadeInUp;position: relative;
+    z-index: 1;
+    background-color: #fff;
+    box-shadow: 0 2px 14px 5px rgb(20 20 20 / 10%);
+    border-radius: 40px;
+    padding-top:20px;
+    text-align: center;
+    margin:10px;    
+    width:100%; 
+    display:table;             
+}
+
+.contact-box .item span {
+    display:table-cell;
+    vertical-align:middle;
+}
+
+.contact-box .item i{
+    font-size:30px;
+    padding-bottom:20px;
+}
+
+.contact-box .item.desktop{
+    display:none;
+}
+
+.contact-box .item .text{
+    display:none;
 }
 
 footer {
@@ -419,6 +487,23 @@ footer i {
     .custom-shape-divider-top svg {
         width: calc(100% + 1.3px);
         height: 85px;
+    }
+
+    .contact-box{
+        flex-wrap:nowrap;
+    }
+
+    .contact-box .item {
+        width:33%;
+        padding: 30px;
+    }
+
+    .contact-box .item.desktop{
+        display:block;
+    }
+
+    .contact-box .item .text {
+        display:block;
     }
 
     footer {
