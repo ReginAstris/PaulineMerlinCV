@@ -610,6 +610,9 @@ footer i {
     -moz-border-radius: 5px;
     border-radius: 5px;
 }
+.dark .section-portfolio .tags li {
+    background-color: black;
+}
 
 .section-portfolio ul.desc {
     margin: 20px 30px;
@@ -653,6 +656,9 @@ button {
     font-size: 15px;
     padding: 12px 30px;
     background-color: #277399;
+}
+.dark .section-portfolio button {
+    background-color: black;
 }
 
 .section-portfolio button i {
