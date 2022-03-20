@@ -498,6 +498,63 @@ footer i {
     text-align:center;
 }
 
+.section-experiences .container {
+    padding:20px;
+}
+
+.section-experiences .separator-timeline {
+    display:none;
+}
+
+.experience-box {
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    display:flex;
+    flex-wrap:wrap;
+    flex-direction:column;
+}
+
+.experience-box .item {
+    visibility: visible;
+    animation-delay: 100ms;
+    animation-name: fadeInUp;position: relative;
+    z-index: 1;
+    text-align: center;
+    margin:10px;    
+    display:table;             
+}
+
+.experience-box .item img {
+    background: white;
+    border-radius: 30px;
+    padding:10px;
+}
+
+.experience-box.reverse {
+    flex-direction: column-reverse;
+}
+
+.experience-box .item span {
+    display:table-cell;
+    vertical-align:middle;
+}
+
+.experience-box .item .poste {
+    text-transform:uppercase;
+}
+
+.experience-box .item .poste i{
+    margin-right:18px;font-size:22px;
+}
+
+.experience-box ul.desc{
+    text-align:left;line-height: 25px;
+}
+.experience-box ul.desc li {
+    padding-bottom:5px;
+}
+
 .section-portfolio .container {
     padding-left:30px;
     padding-right:30px;
@@ -661,6 +718,13 @@ button {
     background-color: black;
 }
 
+.dark .section-portfolio button a:link {
+    color: white; 
+}
+.dark .section-portfolio button a:visited {
+    color: white; 
+}
+
 .section-portfolio button i {
     padding-left: 15px;
 }
@@ -762,6 +826,47 @@ button {
 
     .section-information h2 {
         font-size:18px;
+    }
+
+    .section-experiences .container {
+        padding-left: 100px;
+        padding-right: 100px;
+    }
+
+    .section-experiences .separator-timeline {
+        display:block;
+        margin: 0px auto;
+        width:1020px;
+    }
+
+    .section-experiences .separator-timeline.reverse {
+        transform: rotateY(180deg);
+    }
+
+    .section-experiences .separator-timeline .dark {
+        display:none;
+    }
+    .dark .section-experiences .separator-timeline .dark {
+        display:block;
+    }
+    .dark .section-experiences .separator-timeline .no-dark {
+        display:none;
+    }
+
+    .experience-box{
+        flex-wrap:nowrap;
+    }
+
+    .experience-box .item {
+        width:50%;
+    }
+
+    .experience-box {
+        flex-direction: initial;
+    }
+
+    .experience-box.reverse {
+        flex-direction: initial;
     }
 
     .section-portfolio .container {
