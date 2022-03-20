@@ -357,12 +357,12 @@ footer i {
     #scrollUp {
         display:block;
         position: fixed;
-        right: 40px;
+        right: 1.6rem;
         font-size: 22px;
         line-height: 43px;
         width: 43px;
         height: 43px;
-        bottom: 40px;
+        bottom: 1.6rem;
         background-color: #E5B822;
         color: #fff;
         text-align: center;
