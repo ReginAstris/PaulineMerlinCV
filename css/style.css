@@ -573,7 +573,12 @@ footer i {
     z-index: 1;
     text-align: center;
     margin:10px;    
-    display:table;             
+    display:table;           
+}
+
+.experience-box .item .container-item{
+    display:table-cell;
+    vertical-align: middle; 
 }
 
 .experience-box .item img {
