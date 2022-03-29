@@ -687,6 +687,10 @@ footer i {
     background-image: url('../img/images/cv-mobile.jpg');
 }
 
+#portfolio-tangram .image-box {
+    background-image: url('../img/images/tangram-mobile.jpg');
+}
+
 .overlay {
     position: absolute;
     bottom: 0;
@@ -973,6 +977,10 @@ footer i {
     
     #portfolio-cv .image-box {
         background-image: url('../img/images/cv.jpg');
+    }
+
+    #portfolio-tangram .image-box {
+        background-image: url('../img/images/tangram.jpg');
     }
 
     .section-portfolio ul.desc {
